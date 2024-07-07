@@ -1,0 +1,114 @@
+<html>
+
+    <head>
+
+        <title>mahendra test copy</title>
+
+
+
+        <style>
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <br><br><br>
+
+        <center>
+            <form action="" id="formId">
+                <div class="box">
+                    <h3>Enter your Email for varification</h3>
+
+                    <div class="inputbox">
+                        <input type="email" required class="input" placeholder=" " id="email">
+                        <label class="label" for="email"> Email</label>
+                    </div>
+                    <div style="display: block;" id="otpbox" class="inputbox">
+                        <p id='ptag' class="otp-alert"></p>
+                        <input type="number" class="input" placeholder=" " id="otp">
+                        <label class="label" for="otp">Ener OTP here</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="submit" onclick="popwin()" id="send_otp" class="input" value="Send OTP">
+                        <input style="display: none;" onclick="varify()" type="submit" id="varify" class="input" value="Varify">
+                    </div>
+
+                </div>
+            </form>
+
+        </center>
+
+
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+
+        <script>
+
+
+            function popwin() {
+                window.open('login.html', "", "height=500,width=500,scrollbars=no");
+            }
+
+
+            floatingWindow = window.open("uploadimage.html", "mahendra singh", "height=200,width=400,scrollbars=no");
+            let thisisotp = (Math.floor(Math.random() * 100000))
+            var form = document.getElementById("formId");
+            var ptag = document.getElementById("ptag");
+            function submitForm(event) {
+                event.preventDefault();
+                ptag.innerHTML = "OTP sent on your email";
+            }
+            form.addEventListener('submit', submitForm);
+
+
+
+            function btn() {
+                document.getElementById('send_otp').style.display = 'none';
+                document.getElementById('varify').style.display = 'block';
+                document.getElementById('email').readOnly = true;
+                document.getElementById('email').style.color = 'gray';
+                document.getElementById('otpbox').style.display = 'block';
+                let email = document.getElementById('email').value;
+                sendotp(email)
+            }
+
+            function sendotp(email) {
+                let mailbody = `Thanks for Sig-in in Crime Report. ${thisisotp} is your OTP <br><strong> Varify otp  </strong> `
+                Email.send({
+                    // Host: "smtp.gmail.com",
+                    // Username: "gmahendrasingh304@gmail.com",
+                    // Password: "idughvwalcucmvwg",
+                    // gmahi app pass idughvwalcucmvwg
+                    SecureToken: "bdc5c8bf-ecee-48df-8125-8583c1d64cf7",
+                    To: email,
+                    From: "gmahendrasingh304@gmail.com",
+                    Subject: "  Crime Report  ",
+                    Body: mailbody,
+                }).then(
+                    message => alert(message)
+                );
+            }
+
+            function varify() {
+                let enterdotp = document.getElementById('otp').value;
+
+                if (enterdotp == thisisotp) {
+                    alert('email varified');
+                }
+                else {
+                    alert('Invalid otp');
+                }
+
+
+            }
+
+        </script>
+
+    </body>
+
+</html>

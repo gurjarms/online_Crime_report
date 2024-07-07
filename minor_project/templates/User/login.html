@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+login
+{% endblock title %}
+{% block link%}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+{% endblock link%}
+
+{% block style %}
+
+
+{% endblock style %}
+
+{% block content %}
+<center><br><br><br>
+      <div style="display: none;" id="message" class="alert  alert-dismissible fade show" role="alert">
+
+      </div>
+      <form method="POST">
+
+
+            <div class="box">
+                  <h3>Crime Report</h3>
+                  <h4> LOGIN</h4>
+                  <div class="inputbox">
+                        <input required class="input" onkeyup="validation()" placeholder=" " type="text" id="username" name="username">
+                        <label class="label" id='label' for="username">Username</label>
+                  </div>
+                  <div class="inputbox">
+                        <input required class="input" type="password" placeholder=" " name="password" id="password" />
+
+                        <label class="label" for="password">Password</label>
+                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+                  </div>
+                  <div class="row ">
+                        <div class="col">
+                              <a href="{% url 'password_reset' %} ">Forgot Password?</a>
+                        </div>
+                        <div class="col">
+                              <a href="/send_otp">Sign-up</a>
+                        </div>
+                  </div>
+
+
+
+                  <div class="inputbox">
+                        <input class="submit" type="submit" name="btn" id="submit" value='login'>
+
+                  </div>
+                  <div class="hrdiv">
+                        <hr hieght="" class="hr-1" />or
+                        <hr hieght="" class="hr-1" />
+
+                  </div>
+
+                  <div class="login-with">
+                        <a class="login-link" href="{% url 'social:begin' 'google-oauth2' %}"><img class='image' src="{% static 'images/google.jpg' %}" alt="gooogle">
+                              Log in with Google</a>
+                  </div>
+
+
+            </div>
+            {% csrf_token %}
+      </form>
+
+      <script src="{% static 'js/login.js' %}"></script>
+      <script>
+      </script>
+
+</center>
+{% endblock content %}

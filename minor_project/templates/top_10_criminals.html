@@ -1,0 +1,360 @@
+{% extends 'base.html' %}
+{% block title %}Top 10 Criminals{% endblock title %}
+{% block criminal_active %}active{% endblock criminal_active %}
+
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+{% endblock link %}
+{% block style %}
+.card{
+text-justify:inter-character;
+color:white;
+background-color:#23242a;
+}
+.img{
+  width:400px;
+  height:300px;
+  margin-left:200px;
+  border-radius:15px;
+}
+.image{
+  position:fixed;
+  border-radius:15px;
+  margin-top:450px;
+  width:50px;
+  margin-left:20px;
+}
+.c{
+  color:rgb(200,255,255);
+}
+.border{
+  bottom:50px;
+  border-radius:15px
+}
+a{
+text-decoration:none;
+}
+.c:hover{
+  color:red;
+}
+.c:active{
+  color:darkred;
+}
+{% endblock style %}
+
+{% block content %}
+<a href="#" name="gotop"></a>
+
+<br><br><br>
+<h2 class="text-center">
+  List of top 10 Indian Criminals
+</h2>
+<hr>
+<div class="row">
+
+  <div class="col-sm-2 border border-2 border-secondary fixed-bottom ">
+    <h4 class="text-left">list of top indian most wanted</h4>
+    <ul>
+      <a href="#dawood">
+        <li class="c">Dawood Ibrahim Kaskar</li>
+      </a>
+      <a href="#masood">
+        <li class="c">Masood Azhar</li>
+      </a>
+      <a href="#syed">
+        <li class="c">Syed Salahuddin</li>
+      </a>
+      <a href="#ilyas">
+        <li class="c">Ilyas Kashmiri</li>
+      </a>
+      <a href="#sajid">
+        <li class="c">Sajid Mir</li>
+      </a>
+      <a href="#hafeez">
+        <li class="c">Hafeez Muhammad Saeed</li>
+      </a>
+      <a href="#chhota">
+        <li class="c">Chhota Shakeel</li>
+      </a>
+      <a href="#zaki">
+        <li class="c">Zaki-Ur-Rehman Lakhvi</li>
+      </a>
+      <a href="#major">
+        <li class="c">Major Iqbal</li>
+      </a>
+      <a href="#anees">
+        <li class="c">Anees Ibrahim</li>
+      </a>
+    </ul>
+  </div>
+  <div class="col col-mb-8 offset-3 justify-content-start text-wrap border">
+    <br>
+    <div class="row">
+      <p>मानव सभ्यता की शुरुआत से ही अपराध एक विकट समस्या रही है और इस समस्या से निपटने के 
+        लिए मनुष्य के प्रयास आंशिक रूप से ही सफल हुए हैं। शायद ही कोई समाज हो जो अपराध और
+         अपराध की समस्या से ग्रस्त न हो। जैसा कि एमिल दुर्खीम ने ठीक ही कहा है, अपराध एक प्राकृतिक 
+         घटना है जो सामाजिक परिवर्तन के साथ लगातार बदल रही है।
+      </p>
+      <p>अपराध के कारण के संबंध में अपराधियों के विचार हमेशा अलग-अलग रहे हैं। महाद्वीपीय अपराधी 
+        अक्सर अपराध के अंतर्जात सिद्धांत का समर्थन करते हैं जो अपराधियों के जैव-भौतिक विचार पर स्थापित 
+        होता है। दूसरी ओर, अमेरिकी अपराधी सामाजिक कारकों के संदर्भ में आपराधिकता की व्याख्या करने के 
+        लिए अधिक इच्छुक हैं।
+      </p>
+      <p>अपराध समाज का एक ऐसा हिस्सा है जिसने हर बार सुरक्षा बलों और सरकार को व्यस्त रखा है। अपराधियों के 
+        आंतरिक हमलों से भारत और भारतीयों को बहुत नुकसान हुआ है, लेकिन हमारे सुरक्षाबलों ने हमेशा हमें अपराधियों से बचाया है।
+      </p>
+      <p>कुछ को गिरफ्तार किया गया है और दंडित किया गया है, लेकिन कुछ बचाव के रास्ते से भागने में सफल रहे हैं और 
+        अभी भी दुनिया के किसी न किसी हिस्से में छिपे हुए हैं। भारत अभी भी उन अपराधियों की तलाश करता है, लेकिन कुछ ही
+         प्राथमिकता की सूची में शीर्ष पर हैं। तो आज हम भारत के टॉप 10 मोस्ट वांटेड अपराधियों के बारे में चर्चा करेंगे।
+      </p>
+      <!-- Crime has been a baffling problem ever since the dawn of human civilization and man’s efforts to grapple with this problem have only partially succeeded. There is hardly any society which is not beset with the problem of crime and criminality. As rightly pointed out by Emile Durkheim, crime is a natural phenomenon which is constantly changing with the social change.            Criminologists have always differed in their views regarding crime causation. Continental criminologists often support the endogenous theory of criminality which is founded on bio-physical consideration of criminals. The American criminologists on the other hand, are more inclined to explain criminality in terms of social factors.           Crime is a part of society that has kept the security forces and the government busy every time. India and Indians have suffered a lot from internal attacks from criminals, but our security forces have always saved us from criminals.          Some have been arrested and punished but few managed to escape through the loopholes and are still hidden in some or the other parts of the world. India still searches for those criminals, but few are top on the list of priority. So today, we will discuss the Top 10 Most Wanted Criminals of India. -->
+      
+    </div><br>
+    <div class="row">
+      <a href="#" name="dawood"></a>
+      <div class="card">
+        <img src="{% static 'images/dik.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">1. Dawood Ibrahim Kaskar
+          </h5>
+          <p class="card-text">
+          <h5> Nickname: Dawood Bhai, Sheikh Farroqi, Bada Seth, Bada Bhai, Iqbal Mucchad and Hani Sahab</h5>
+          <h5>Date of Birth: 26 December 1955, Maharashtra, India</h5>
+          <h5> Age: 67 Years (as in 2022)</h5>
+          <h5> Profession: Gangster, Terrorist</h5>
+          <h5> Nationality: Indian (also Holds Pakistani Passport)</h5>
+          <h5> Religion: Islam</h5>
+          Dawood Ibrahim Kaskar is one of India’s most dangerous criminals and the head of Mumbai’s underworld
+          operations.
+          He is 67 years old, and his father used to work as a police head constable in Maharashtra. He is said to have
+          played a major role in the serial bomb blasts in Mumbai in 1993.
+    
+          It was one of the most devastating scenes of bomb blasts in India. 350 people were killed and 1200 people were
+          injured. It has also been said that he was also instrumental in the 2008 terrorist attacks in Mumbai. He is said
+          to have been associated with al Qaeda chief Osama bin Laden.
+    
+          He was also part of the spot-fixing scam in the IPL. In India, Ibrahim is also involved in other activities such
+          as trading of fake notes and medicines. Which is very harmful to India’s economic and security interest.
+          Currently, Ibrahim is hiding in Karachi, Pakistan.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" name="masood"></a>
+      <div class="card">
+        <img src="{% static 'images/MA.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">2. Masood Azhar</h5>
+          <p class="card-text">
+          <h5> Real Name: Mohammad Masood Azhar Alvi</h5>
+          <h5> Nickname: Masood</h5>
+          <h5> Date Of Birth: 10 July 1968, Bahawalpur, Punjab, Pakistan</h5>
+          <h5> Age: 54 Years (as in 2022)</h5>
+          <h5> Profession: Terrorist</h5>
+          <h5>Nationality: Pakistani</h5>
+          Currently, Masood Azhar is the leader of Jaish-e-Mohammed, a terrorist group based in the part of Kashmir
+          occupied
+          by Pakistan. It is a terrorist who hijacked Indian Airlines Flight 814 (IC 814) in Afghanistan in 1999 and
+          hijacked the passengers and took them to Kandahar, forcing the Indian government to release those passengers.
+    
+          At that time, the Taliban were in control of Afghanistan.Jaish-e-Mohammed is responsible for the 2001 Parliament
+          attacks. It is believed that currently, he is in Pakistan.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" name="syed"></a>
+      <div class="card ">
+        <img src="{% static 'images/SS.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">3. Syed Salahuddin</h5>
+          <p class="card-text">
+          <h5>Full Name: Mohammad Yusuf Shah</h5>
+          <h5>Date Of Birth: 18 February 1946, Soibugh, Kashmir and Jammu, British Indian Empire (now in Jammu and Kashmir,
+            India)</h5>
+          <h5>Age: 76 years (as in 2022)</h5>
+          Syed Salahuddin is the chief of Hizbul Mujahideen, a militant outfit based in Kashmir.Syed is the mastermind of
+          hundreds of terrorist attacks in Jammu & Kashmir. He is a terrorist organisation based in Pakistan. Its purpose
+          is
+          to capture Kashmir, the western part of India. He also targets Indian Armed Forces in the valley.
+    
+          Syed has been given responsibility for several terrorist attacks in Jammu and Kashmir. India’s National
+          Investigation Agency is seriously looking for it.
+    
+          He is currently residing in Pakistan and leads Hizbul Mujahideen. The main of his terrorist organization is to
+          promote unstability in Jammu & Kashmir.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" name="ilyas"></a>
+      <div class="card">
+        <img src="{% static 'images/IK.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">4. Ilyas Kashmiri</h5>
+          <p class="card-text">
+          <h5>Date Of Birth: 10 February 1964,Bhimber,Samahni Valley, Azad Kashmir</h5>
+          <h5>Died: 3 June 2011 (aged 47) · North Waziristan, FATA, Pakistan</h5>
+          <h5>Cause of death: Drone attack</h5>
+          <h5>Occupation: Pakistani SSG Guerrilla Fighter</h5>
+          Ilyas Kashmiri was also an operative of Harkat-ul-Jihadi Islami, a terrorist organization and al Qaeda. He
+          planned
+          the German Bakery blast in Pune and was also instrumental in the 26/11 attacks. He was also responsible for the
+          2002 attack on the American Centre in Kolkata.
+    
+          He had planned blasts in Delhi, Ahmedabad, Jaipur and Bengaluru in 2008. he was reported that he was killed
+          during
+          a US drone strike in 2011. However, this report was later proved wrong. His current status is unknown.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" name="sajid"></a>
+      <div class="card">
+        <img src="{% static 'images/SM.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">5. Sajid Mir</h5>
+          <p class="card-text">
+          <h5>Other Names: Sajid Majid, Sajid Majid Chaudary, Uncle Bill</h5>
+          <h5>Date Of Birth: 1 January 1978, Lahore, Pakistan</h5>
+          <h5>Known for: 2008 Mumbai attacks</h5>
+          <h5>Nationality: Pakistani</h5>
+          Sajid Mir is a very dangerous criminal and is on the hit list of NIA and the Indian Armed Forces. Sajid Mir
+          came to India in 2005 under the guise of a cricket fan but was actually the commander of Lashkar-e-Taiba. The
+          reason for his coming to India was to prepare for the attack in Mumbai, which was carried out in 2008.
+    
+          A series of first surveillance operations were launched in India by David Headley. In which Dawood Headley was
+          sent to Pakistan-America. Headley told Mir that Karachi was a safe place from where Mir directed the team for
+          the mumbai attack.
+    
+          He used the internet line and also ordered several hostages to be executed. Currently, Mir is hiding in a safe
+          place which is being operated by the ISI directorate, according to information provided by intelligence sources
+          in the West. He is accompanied by Abdur Rehman Hashim, a former army officer who accompanied him to Delhi.
+    
+          Sajid Mir is also on the hit list of the FBI as his terrorist organization has killed hundreds of people
+          worldwide.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" name="hafeez"></a>
+      <div class="card">
+        <img src="{% static 'images/HMS.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">6. Hafeez Muhammad Saeed
+          </h5>
+          <p class="card-text">
+          <h5>Date Of Birth: 5 June 1950, Sargodha, Punjab, Pakistan
+          </h5>
+          <h5>Nationality: Pakistani</h5>
+          <h5>Known for: Co-founding of Lashkar-e-Taiba</h5>
+          Hafiz Mohammad Saeed is also the leader of Jamaat-ud-Dawa along with Lashkar-e-Taiba. Jamaat-ud-Dawa (JuD) was
+          declared a terrorist organisation by the United Nations in December 2008. It is said to be a major conspirator
+          behind the 26/11 attacks.
+    
+          He is also known for making hate speeches against India in public. After 26/11, he was under house arrest for a
+          brief period, but had organised rallies against the US as well as India since 2014.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" name="chhota"></a>
+      <div class="card">
+        <img src="{% static 'images/CS.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">7. Chhota Shakeel</h5>
+          <p class="card-text">
+          <h5>Birth Name: Mohammed Shakeel Babu Miyan Shaikh.</h5>
+          <h5>Date Of Birth: 31 December 1955, Bombay, Maharashtra, India</h5>
+          <h5>Occupation: Crime boss</h5>
+          This don is a very dangerous terrorist. He is a close associate of Dawood Ibrahim and played a major role in
+          the 1993 Mumbai blasts like the mastermind.
+    
+          In September 2001, he had also accused Chhota Rajan in Bangkok. It is believed that after the death of Osama bin
+          Laden, he has fled from Pakistan to Saudi Arabia.
+    
+          He is also wanted by the U.S. government for international drug trafficking.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" name="zaki"></a>
+      <div class="card">
+        <img src="{% static 'images/ZURL.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">8. Zaki-Ur-Rehman Lakhvi</h5>
+          <p class="card-text">
+          <h5>Date Of Birth: 30 December 1960, Okara District, Punjab, Pakistan</h5>
+          <h5>Occupation: Militant</h5>
+          <h5>Known for: 2008 Mumbai attacks</h5>
+          Zaki-ur-Rehman Lakhvi is the founder of the dreaded terrorist organization Lashkar -e-Tayyeba. He was a
+          mastermind behind the 26/11 attack. In the last few years, he has been responsible for several terrorist attacks
+          across India.
+    
+          It is now considered one of the most active feared terrorist organisations in India. he features on India’s NIA
+          Most Wanted list. In January 2021 He is currently imprisoned in Pakistan for his role in the 26/11 attacks.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" name="major"></a>
+      <div class="card">
+        <img src="{% static 'images/MI.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">9. Major Iqbal</h5>
+          <p class="card-text">
+            Major Iqbal was the brainchild in conducting the 26/11 attack. He is an ISI officer and the chief of the
+            Pakistan Army. He was the mastermind of various terrorist attacks and border infiltration from the Pakistan
+            side.
+    
+            The man who took over David Headley. He recruited, trained and guided them so that they could observe Indian
+            activities. As of now, India wants to listen to Iqbal’s record voice to prove that he played a role in guiding
+            Ajmal Kasab and his associates over phone.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" name="anees"></a>
+      <div class="card ">
+        <img src="{% static 'images/AI.jpg' %}" class="card-img-top img" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">10. Anees Ibrahim</h5>
+          <p class="card-text">
+          <h5>Full Name: Anees Ibrahim Kaskar</h5>
+          <h5>Date Of Birth: Not known</h5>
+          <h5>Nationality: Indian</h5>
+          <h5>Occupation: Gangster and drug dealer</h5>
+          Anees Ibrahim is a Mumbai based wanted Indian terrorist. He is also dawood Ibrahim’s younger brother and his most
+          trusted aide. He has participated in every criminal activity carried out by Dawood. He is an accused in the 1993
+          Mumbai blasts, in which 257 people were killed.
+    
+          The person who completes the arrangement with the requirements to complete his brother’s work. He was shot by
+          members of a rival gang in 2009. No one has received any information about him since then.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="col col-sm-1 ">
+    <a href="#gotop">
+      <i class=" image bi bi-arrow-up-circle"></i>
+
+    </a>
+    
+  </div>
+
+</div>
+
+{% endblock content %}

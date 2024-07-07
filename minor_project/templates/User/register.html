@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block register_active %}active{% endblock register_active %}
+
+
+{% block title %}
+Registration Page
+{% endblock title %}
+
+{% load widget_tweaks %}
+
+
+{% load crispy_forms_tags %}
+{% block link%}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock link%}
+
+{% block style %}
+.error{
+color:red;
+margin-top:-50px;
+
+{% endblock style %}
+
+{% block content %}
+<center>
+  <br><br><br><br>
+
+
+
+
+  <form method="POST" action="{% url 'register' %}">
+    <div class="box">
+
+
+      {% if messages %}
+      {% for message in messages %}
+      <span {% if message.tags %} class="{{message.tags}} message" {% endif %}>{{message}}
+      </span>
+      {% endfor %}
+      {% endif %}
+
+      <h2>Sign-in</h2>
+
+
+      <div class="inputbox">
+        {% render_field form.username placeholder=" " class="input"%}
+        <label for='id_username' class='label'>Username<label>
+
+      </div>
+      <div class="inputbox">
+        <input class='input' type="email" id="id_email" value="{{ request.session.email }}" readonly onkeypress="myfunction()" name="email">
+        <label for="id_email" class="label" for="email">Email</label>
+
+      </div>
+      <div class="inputbox">
+        {% render_field form.Mobile_No placeholder=' ' class='input'%}
+        <label for='id_Mobile_No' class='label'>Mobile No<label>
+
+      </div>
+      <div class="inputbox">
+        {% render_field form.password1 placeholder=' ' class='input'%}
+        <label for='id_password1' class='label'>password<label>
+
+      </div>
+      <div class="inputbox">
+        {% render_field form.password2 placeholder=' ' class='input'%}
+        <label for='id_password2' class='label'>password2<label>
+
+      </div>
+
+      <div class="links">
+        <a href="{% url 'login' %}">allredy have a Account ! Login </a>
+      </div>
+      <div class="inputbox">
+        <input class='submit' type="submit" name="singup" id="singup" value="Sign Up">
+      </div>
+
+    </div>
+    </div>
+
+    {% csrf_token %}
+
+  </form>
+</center>
+
+<script>
+  function myfunction() {
+    let a = document.getElementById('id_email').value;
+    for (let i in a) {
+      if (1 == 1) {
+      }
+    }
+  }
+
+</script>
+
+{% endblock content %}

@@ -1,0 +1,64 @@
+.inputbox {
+  position: relative;
+  width: 95%;
+  margin: 10px;
+  border-bottom: 2px solid #8f8f8f;
+}
+
+.inputbox input {
+  position: relative;
+  width: 95%;
+  padding-top: 20px;
+  background: none !important;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  font-size: 1em;
+  color: white;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.inputbox input:valid~span,
+.inputbox input:focus~span {
+  color: rgb(255, 255, 255);
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.inputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 15px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputbox input:valid~i,
+.inputbox input:focus~i {
+  height: 60 px;
+}
+
+input {
+  cursor: pointer;
+
+}
+
+input:active {
+  opacity: 0.8;
+  background-color: #8f8f8f;
+}

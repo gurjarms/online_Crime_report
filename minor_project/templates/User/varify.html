@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}send OTP {% endblock title %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/varify.css' %}">
+{% endblock link %}
+
+{% block style %}
+
+
+.body{
+color:white;
+background-color: #1c1c1c;
+}
+.error{
+color:red;
+}
+.image{
+top:-50px;
+}
+.form{
+margin-top:100px;
+}
+
+{% endblock style %}
+{% block content %}
+<br>
+<br><br>
+
+<div class="row ">
+    <div class="col form sm-2 offset-1">
+        <h5>We just send OTP on your Email <br> address:- "{{ request.session.email }}"<br>
+        </h5>
+        <form method='post' >
+            <div class="row">
+                <div class="col ">
+                    <div class="row">
+                        <div class="inputbox">
+
+                            <input maxlength="5" class="input" placeholder=" " type="number" id="number" required name="otp">
+                            <label class="label" for="number">Enter OTP here</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col offset-2">
+                            <button class="btn btn-outline-success" name="btn" value="{{email}}">varify</button>
+                        </div>
+                    </div>
+
+                    {% if messages %}
+                    {% for message in messages %}
+                    <span {% if message.tags %} class="{{message.tags}} message" {% endif %}> {{message}}
+                    </span>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            {% csrf_token %}
+        </form>
+
+    </div>
+    <div class='col sm-5 offset-1 image'>
+        <img src='{% static "images/otp_varify.gif" %}' alt='varify gif'>
+    </div>
+
+</div>
+
+{% endblock content %}

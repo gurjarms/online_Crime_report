@@ -1,0 +1,459 @@
+{% extends 'base.html' %}
+{% block title %}
+List of Criminals
+{% endblock %}
+{% load static %}
+{% block criminallist_active %}active{% endblock criminallist_active %}
+
+{% block style %}
+
+li{
+color:rgb(200,255,255);
+}
+.card{
+text-justify:inter-character;
+color:white;
+background-color:#23242a;
+}
+.img{
+width:400px;
+height:300px;
+margin-left:200px;
+border-radius:15px;
+}
+.image{
+position:fixed;
+border-radius:15px;
+margin-top:370px;
+
+}
+.c{
+color:rgb*(200,255,255);
+}
+.border{
+bottom:50px;
+border-radius:15px
+}
+a{
+text-decoration:none;
+}
+.c:hover{
+color:red;
+}
+.c:active{
+color:darkred;
+}
+.list{
+margin-top:90px;
+}
+{% endblock style %}
+
+{% block content %}
+<br><br><br>
+<div class="row">
+    <div class="col-sm-2 border border-2 border-secondary fixed-top list">
+        <h4 class="text-left" style="font-size: 21px;">Table of Contents</h4>
+        <ul>
+            <a href="#American">
+                <li class="c">American</li>
+            </a>
+            <a href="#Austrian">
+                <li class="c">Austrian</li>
+            </a>
+            <a href="#Belgian">
+                <li class="c">Belgian</li>
+            </a>
+            <a href="#British">
+                <li class="c">British</li>
+            </a>
+            <a href="#French">
+                <li class="c">French</li>
+            </a>
+            <a href="#German">
+                <li class="c">German</li>
+            </a>
+            <a href="#Indian">
+                <li class="c">Indian</li>
+            </a>
+            <a href="#Italian">
+                <li class="c">Italian</li>
+            </a>
+            <a href="#Japanese">
+                <li class="c">Japanese</li>
+            </a>
+            <a href="#Roman">
+                <li class="c">Roman (ancient)</li>
+            </a>
+            <a href="#Russian">
+                <li class="c">Russian</li>
+            </a>
+            <a href="#Pakistani">
+                <li class="c">Pakistani</li>
+            </a>
+        </ul>
+    </div>
+    <div class="col col-mb-8 offset-3">
+        <div class="">
+            <h2 class="text-center">List of Criminals</h2>
+
+            <p> Written and fact-checked by Last Updated: Article History This is a list of people who were convicted of
+                crimes
+                or
+                who became infamous for their criminal activities, ordered alphabetically by their place of origin or
+                residence.
+            </p>
+            <div class="col-sm-10 ">
+                <ul>
+                    <div class="row">
+                        <a href="#" name="American">
+                            <h5>American</h5>
+                            <li class="c" onclick="show_hide()">Joe Adonis
+                                <div class="row" id="data">
+                                    <div class="card">
+                                        <img src="{% static 'images/JA.jpg' %}" class="card-img-top img" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Joe Adonis
+                                            </h5>
+                                            <p class="card-text">
+                                            <h6>Joe Adonis, original name Giuseppe</h6>
+                                            <h6>Date of Birth: November 22, 1902 Avellino Italy</h6>
+                                            <h6>Died: November 26, 1971 (aged 69) Ancona Italy</h6>
+                                            <h6>Also Known As Giuseppe Antonio Doto</h6>
+                                            Joe Adonis, original name Giuseppe Antonio Doto, (born Nov. 22, 1902,
+                                            Avellino, Italy—died Nov. 26, 1971, Ancona), major American crime-syndicate
+                                            boss in New York and New Jersey.
+
+                                            Born near Naples, Adonis came to America as a child and in the 1920s became
+                                            a follower of Lucky Luciano. He was one of the assassins of crime czar
+                                            Giuseppe Masseria in 1931, leading to Luciano’s supremacy in organized
+                                            crime. As a rackets boss, Adonis specialized in labour racketeering,
+                                            gambling, and hijacking. In 1951 he was convicted of violating gambling laws
+                                            and sentenced to two to three years in prison. In 1953 he was ordered
+                                            deported to Italy.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c" onclick="show_hide()">Albert Anastasia
+                                <div class="row" id="data">
+                                    <div class="card">
+                                        <img src="{% static 'images/AA.jpeg' %}" class="card-img-top img" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Albert Anastasia
+                                            </h5>
+                                            <p class="card-text">
+                                            <h6>Albert Anastasia, original name Umberto Anastasio</h6>
+                                            <h6>Born: September 26, 1902 Italy</h6>
+                                            <h6>Died: October 25, 1957 (aged 55) New York City New York</h6>
+                                            <h6>Also Known As Umberto Anastasio</h6>
+                                            Albert Anastasia, original name Umberto Anastasio, (born Sept. 26, 1902,
+                                            Tropea, Italy—died Oct. 25, 1957, New York, N.Y., U.S.), major American
+                                            gangster.
+
+                                            Anastasia immigrated to New York City from Italy in 1919 and, in the 1920s,
+                                            rose through Giuseppe Masseria’s gang. He was one of Masseria’s executioners
+                                            in 1931, at Lucky Luciano’s command. In the late 1930s he became active head
+                                            of “Murder, Inc.,” a notorious murder-for-hire organization, and in the late
+                                            1940s became boss of one of the Five Families of organized crime in New York
+                                            City. He was murdered by two gunmen (hired by rival Vito Genovese) as he sat
+                                            in a barber chair in the Park Sheraton Hotel.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c" onclick="show_hide()">Benedict Arnold
+                                <div class="row" id="data">
+                                    <div class="card">
+                                        <img src="{% static 'images/Benedict_Arnold.jpeg' %}" class="card-img-top img"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Benedict Arnold
+                                            </h5>
+                                            <p class="card-text">
+                                            <h6>Born: January 14, 1741 Norwich Connecticut</h6>
+                                            <h6>Died: June 14, 1801 (aged 60) London England</h6>
+                                            <h6>Role In American Revolution • Battle of Bemis Heights • Battle of Quebec
+                                                • Battle of Ticonderoga • Battles of Saratoga</h6>
+                                            Benedict Arnold, (born January 14, 1741, Norwich, Connecticut [U.S.]—died
+                                            June 14, 1801, London, England), patriot officer who served the cause of the
+                                            American Revolution until 1779, when he shifted his allegiance to the
+                                            British. Thereafter his name became an epithet for traitor in the United
+                                            States.
+
+                                            Benedict Arnold
+                                            Benedict Arnold
+                                            Upon the outbreak of hostilities at Lexington, Massachusetts (April 1775),
+                                            Arnold volunteered for service and participated with Ethan Allen in the
+                                            successful colonial attack on British-held Fort Ticonderoga, New York, the
+                                            following month. That autumn he was appointed by Gen. George Washington to
+                                            command an expedition to capture Quebec. He marched with 700 men by way of
+                                            the Maine wilderness, a remarkable feat of woodsmanship and endurance, and,
+                                            reinforced by Gen. Richard Montgomery, attacked the well-fortified city. The
+                                            combined assault (December 31, 1775) failed, Montgomery was killed, and
+                                            Arnold was severely wounded.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li class="c" onclick="show_hide()">Lafayette Curry Baker
+                                <div class="row" id="data">
+                                    <div class="card">
+                                        <img src="{% static 'images/Benedict_Arnold.jpeg' %}" class="card-img-top img"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Lafayette Curry Baker
+                                            </h5>
+                                            <p class="card-text">
+                                            <h6>Born: January 14, 1741 Norwich Connecticut</h6>
+                                            <h6>Died: June 14, 1801 (aged 60) London England</h6>
+                                            <h6>Role In American Revolution • Battle of Bemis Heights • Battle of Quebec
+                                                • Battle of Ticonderoga • Battles of Saratoga</h6>
+                                            Benedict Arnold, (born January 14, 1741, Norwich, Connecticut [U.S.]—died
+                                            June 14, 1801, London, England), patriot officer who served the cause of the
+                                            American Revolution until 1779, when he shifted his allegiance to the
+                                            British. Thereafter his name became an epithet for traitor in the United
+                                            States.
+
+                                            Benedict Arnold
+                                            Benedict Arnold
+                                            Upon the outbreak of hostilities at Lexington, Massachusetts (April 1775),
+                                            Arnold volunteered for service and participated with Ethan Allen in the
+                                            successful colonial attack on British-held Fort Ticonderoga, New York, the
+                                            following month. That autumn he was appointed by Gen. George Washington to
+                                            command an expedition to capture Quebec. He marched with 700 men by way of
+                                            the Maine wilderness, a remarkable feat of woodsmanship and endurance, and,
+                                            reinforced by Gen. Richard Montgomery, attacked the well-fortified city. The
+                                            combined assault (December 31, 1775) failed, Montgomery was killed, and
+                                            Arnold was severely wounded.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c" onclick="show_hide()">Lafayette Curry Baker
+                                <div class="row" id="data">
+                                    <div class="card">
+                                        <img src="{% static 'images/curry_baker.jpeg' %}" class="card-img-top img"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Lafayette Curry Baker
+                                            </h5>
+                                            <p class="card-text">
+                                            <h6>Born: October 13, 1826 New York</h6>
+                                            <h6>Died: July 3, 1868 (aged 41) Philadelphia Pennsylvania</h6>
+                                            <h6>Role In: American Civil War</h6>
+                                            LaFayette Curry Baker, (born Oct. 13, 1826, Stafford, N.Y., U.S.—died July
+                                            3, 1868, Philadelphia, Pa.), chief of the U.S. Federal Detective Police
+                                            during the American Civil War and director of Union intelligence and
+                                            counterintelligence operations.
+
+                                            In 1848 Baker left his home in Michigan, where the family had moved when he
+                                            was a child, and worked at a variety of occupations in the West. In 1856 he
+                                            joined the San Francisco Vigilance Command (known as the Vigilantes), a
+                                            group of self-appointed police whose operations were characterized by
+                                            arbitrariness and lack of due process. In the next four years he was often
+                                            employed in an undercover capacity and became adept at techniques of
+                                            deception and disguise. When the Civil War broke out in 1861, he went to
+                                            Washington, D.C., and offered his services to General Winfield Scott. Sent
+                                            to reconnoitre the Richmond, Va., area, he was arrested as a spy but escaped
+                                            while Confederate president Jefferson Davis sought to determine the validity
+                                            of the charge.
+
+                                            Baker later worked as a detective in the War Department, the State
+                                            Department, and the Post Office before succeeding Allan Pinkerton as head of
+                                            the federal secret service in November 1862. Baker soon penetrated every
+                                            area of the military and the civil government of the Union as well as the
+                                            Confederacy, using hundreds of agents and detectives deployed in two forces
+                                            whose members were unknown to each other.
+
+                                            Baker adopted the motto “Death to Traitors” for himself and his service. He
+                                            maintained a headquarters and a prison in the Old Capitol building, where he
+                                            detained many citizens on flimsy evidence or mere suspicion and subjected
+                                            them to intensive interrogation to extract confessions and information. In
+                                            1863 he raised a battalion of cavalry, officially known as the 1st District
+                                            of Columbia Cavalry but more widely called Baker’s Rangers. The unit was
+                                            used primarily as a counter-guerrilla force against J.S. Mosby and his
+                                            raiders and was expanded to a full regiment before the war was over.
+
+                                            In 1864 Baker personally uncovered a major fraud in the Treasury Department;
+                                            broke up the “Northwest Conspiracy,” a plan by Confederate terrorists to
+                                            carry the war to the cities of the North by arson and other means; and
+                                            uncovered acts of trading with the enemy by prominent Union officials. After
+                                            Lincoln was assassinated in April 1865, Baker personally planned and managed
+                                            the pursuit and capture of John Wilkes Booth and his accomplice, D.E.
+                                            Herold. Baker was accused of negligence in Lincoln’s death but, in fact, had
+                                            no direct responsibility for the president’s protection and was on duty in
+                                            New York when the assassination occurred. His quick response won him a
+                                            long-sought promotion to brigadier general.
+
+                                            After the Civil War Baker continued his police and intelligence activities,
+                                            paying particular attention to a large trade in pardons for former
+                                            Confederates that reached into the White House. Baker, whose disdain for due
+                                            process frequently left him open to political attack, eventually resigned
+                                            his post, and his secret service was disbanded when Congress refused it
+                                            further funding. Baker later testified at Johnson’s impeachment trial,
+                                            making sensational but undocumented charges against the president. In 1867
+                                            he published History of the United States Secret Service.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="c">Ma Barker</li>
+                            <li class="c">Billy the Kid</li>
+                            <li class="c">Anne Bonny</li>
+                            <li class="c">John Wilkes Booth</li>
+                            <li class="c">Boston Strangler</li>
+                            <li class="c">Louis Buchalter</li>
+                            <li class="c">James (“Whitey”) Bulger</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="Austrian">
+                            <h5>Austrian</h5>
+                            <li class="c">Ernst Kaltenbrunner</li>
+                            <li class="c">Arthur Seyss-Inquart</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="Belgian">
+                            <h5>Belgian</h5>
+                            <li class="c">Marc Dutroux</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="British">
+                            <h5>British</h5>
+                            <li class="c">Philip Howard, 1st (or 13th) earl of Arundel</li>
+                            <li class="c">William Burke</li>
+                            <li class="c">Lucy Hay, countess of Carlisle</li>
+                            <li class="c">Sir Roger Casement</li>
+                            <li class="c">Fletcher Christian</li>
+                            <li class="c">George Plantagenet, duke of Clarence</li>
+                            <li class="c">James Cragg</li>
+                            <li class="c">Moll Cutpurse</li>
+                            <li class="c">Thomas Darcy, Lord Darcy</li>
+                            <li class="c">Edward Marcus Despard</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="French">
+                            <h5>French</h5>
+                            <li class="c">Charles de Valois, duc d’Angoulême</li>
+                            <li class="c">François-Noël Babeuf</li>
+                            <li class="c">Jean Balue</li>
+                            <li class="c">François Bigot</li>
+                            <li class="c">Joseph Caillaux</li>
+                            <li class="c">Henri Charrière</li>
+                            <li class="c">Marie de Rohan-Montbazon, duchesse de Chevreuse</li>
+                            <li class="c">Henri Coiffier de Ruzé, marquis de Cinq-Mars</li>
+                            <li class="c">Charlot Corday</li>
+                            <li class="c">Robert-François Damiens</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="German">
+                            <h5>German</h5>
+                            <li class="c">Klaus Barbie</li>
+                            <li class="c">Wolfgang Beltracchi</li>
+                            <li class="c">Martin Bormann</li>
+                            <li class="c">Adolf Eichmann</li>
+                            <li class="c">Hans Frank</li>
+                            <li class="c">Karl Hermann Frank</li>
+                            <li class="c">Wilhelm Frick</li>
+                            <li class="c">Walther Funk</li>
+                            <li class="c">Hermann Göring</li>
+                            <li class="c">Bruno Hauptmann</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="Indian">
+                            <h5>Indian</h5>
+                            <li class="c">Veerappan</li>
+                            <li class="c">Phoolan Devi</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="Italian">
+                            <h5>Italian</h5>
+                            <li class="c">Caravaggio</li>
+                            <li class="c">Gian Luigi Fieschi il Giovanne</li>
+                            <li class="c">Marin Falier</li>
+                            <li class="c">Lorenzino de’ Medici</li>
+                            <li class="c">Monster of Florence</li>
+                            <li class="c">Felice Orsini</li>
+                            <li class="c">Michele Sindona</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="Japanese">
+                            <h5>Japanese</h5>
+                            <li class="c">Araki Sadao</li>
+                            <li class="c">Homma Masaharu</li>
+                            <li class="c">Koiso Kuniaki</li>
+                            <li class="c">Tanaka Kakuei</li>
+                            <li class="c">Taoka Kazuo </li>
+                            <li class="c">Tenji</li>
+                            <li class="c">Tojo Hideki</li>
+                            <li class="c">Yamashita Tomoyuki</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="Roman">
+                            <h5>Roman</h5>
+                            <li class="c">Decimus Junius Brutus Albinus</li>
+                            <li class="c">Marcus Junius Brutus</li>
+                            <li class="c">Gaius Cassius</li>
+                            <li class="c">Gaius Cassius Longinus</li>
+                            <li class="c">Publius Cornelius Lentulus</li>
+                            <li class="c">Gaius Trebonius</li>
+                            <li class="c">Gaius Verres</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="Russian">
+                            <h5>Russian</h5>
+                            <li class="c">Andrei Chikatilo</li>
+                            <li class="c">Boris Viktorovich Savinkov</li>
+                            <li class="c">Andrey Andreyevich Vlasov</li>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#" name="Pakistani">
+                            <h5>Pakistani</h5>
+                            <li class="c">Javed Iqbal</li>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+    {% comment %} </div>
+    <script>
+        var a;
+        function show_hide() {
+            if (a == 1) {
+                document.getElementById("data").style.display = "inline";
+                return a = 0;
+            }
+            else {
+                document.getElementById("data").style.display = "none";
+                return a = 1;
+            }
+        }
+    </script> {% endcomment %}
+    {% endblock %}

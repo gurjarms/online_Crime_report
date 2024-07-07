@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% block FIR_active %}active{% endblock FIR_active %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+
+{% block title %}
+FIR Page
+{% endblock title %}
+
+{% block style %}
+
+body {
+background-color:#1c1c1c;
+color: rgb(255,255,255,0.8);
+}
+
+
+input, select {
+background-color:transparent;
+outline:none;
+border:2px solid black;
+border-radius:20px;
+border-bottom:2px solid white;
+color:white;
+margin-top:20px;
+margin-bottom:20px;
+}
+
+textarea{
+background-color:transparent;
+color:white;
+border:none;
+outline:3px solid black;
+border-radius:20px;
+}
+
+select{
+color:white;
+background-color:#1c1c1c;
+outline:none;
+inline:none;
+}
+.fir-heading{
+color:white;
+background-color:rgb(15,15,15);
+border-radius:20px;
+}
+span{
+color:rgb(150,0,0);
+font-size:20px;
+}
+@keyframes blink{
+0%{
+background-color:transparent;
+}
+}
+{% endblock style %}
+{% block content %}
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <center>
+      <div class="h2 fir-heading  ">Write a FIR</div>
+    </center>
+    <br><br><br>
+    <form action="" method="post" enctype="multipart/form-data">
+
+      <div class="row">
+        <div class="col">
+          <b>select Police station location in Ujjain district</b>
+        </div>
+        <div class="col">
+          <label for="tehsil">Choose your tehsil<span>*</span> :- </label>
+          {{form.Tehsil}}
+
+        </div>
+        <div class="col">
+          <label for="station_name">Police station<span>*</span> :- </label>
+          {{form.Police_station}}
+        </div>
+
+      </div>
+      <hr class="hr ">
+      <div class="row">
+        <p>Criminal details if available</p>
+        <div class="col">
+          <label for="criminal_name">criminal name:- </label>
+          {{form.Criminal_name}}
+        </div>
+        <div class="col">
+
+          <label for="criminal_mobile_no">criminal mobile no:- </label>
+          {{form.Criminal_mobile_No}}
+        </div>
+      </div>
+      <hr class="hr ">
+      <div class="row">
+        <p>Your personal details<br><br>
+          <label for="anonymous">check to hide yourself:- </label>
+          {% render_field form.anonymous class="checkbox" id="image-clear_id" %}
+        </p>
+        <div class="col">
+          <label for="your_name">Name<span>*</span> :- </label>
+          {{form.Name}}
+        </div>
+        <div class="col">
+
+          <label for="your_addr">Permanent address<span>*</span> :- </label>
+          {{form.Permanent_address}}
+        </div>
+        <div class="col">
+
+          <label for="your_mobile_no">Mobile No<span>*</span> :- </label>
+          {{form.Mobile_NO}}
+        </div>
+        <hr class="hr ">
+        <div class="row">
+          <p>Crime details</p>
+          <div class="col">
+            <label for="crime_place">Place of crime<span>*</span> </label>
+            {{form.place_of_crime}}
+          </div>
+          <div class="col">
+            <label for="crime_date">Date of crime<span>*</span> </label>
+            {{form.Date}}
+          </div>
+          <div class="col">
+            <label for="crime_time">Time of crime<span>*</span> </label>
+            {{form.Time}}
+
+          </div>
+        </div>
+        <br><br>
+        <div class="row mt-5">
+          <div class="col">
+            <label for="title">Title of crime<span>*</span> </label>
+            {{form.TitleOfCrime}}
+          </div>
+          <div class="col">
+            <label for="content">content of crime<span>*</span> </label>
+            {{form.content}}
+          </div>
+
+        </div>
+
+        <input type="hidden" value="{{ user.username }}" name="author" id='id_author'>
+        
+  <input type="checkbox" id='checkbox' onclick="enable('checkbox')" /> If all information is right then check the box for submit the FIR
+        <hr class="hr">
+        
+
+      </div>
+
+  </div>
+
+  <center>
+    <input type="submit" name="submit" disabled id="submit" value='send' class="btn btn-info">
+
+  </center>
+  {% csrf_token %}
+  </form>
+  <script>
+    function enable() {
+      let a = document.querySelector('#checkbox');
+      console.log()
+      if (a.checked == true) {
+        let b = document.getElementById('submit').disabled = this.checked;
+      }
+      else {
+        let b = document.getElementById('submit').disabled = !this.checked;
+
+      }
+    }
+
+    let number = document.getElementById('id_Mobile_NO').value;
+    if (number > 9999999999) {
+      alert('out of range');
+    }
+
+  </script>
+</div>
+
+
+{% endblock content %}

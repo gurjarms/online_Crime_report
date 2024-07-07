@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block link %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+{% endblock link %}
+{% block style %}
+
+.ptag{
+    position:absolute;
+    color:green;
+}
+
+{% endblock style %}
+
+{% block content %}
+<br><br><br>
+
+<center>
+
+    {% if temp  %}
+
+    <form method="post" action="{% url 'varify' %}">
+
+        <div class="box">
+
+
+            <h3>We sent OTP on your Email </h3>
+
+            <div class="inputbox">
+                <input type="email" readOnly class="input" value='{{ request.session.email}}' placeholder=" " id="email">
+                <label class="label" for="email"> Email</label>
+            </div>
+            
+            <div id="otpbox" class="inputbox">
+                
+                <input type="number" name="userotp" class="input" placeholder=" " id="otp">
+                <label class="label" for="otp">Ener OTP here</label>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <a href="{% url 'mailsending' %}">resend otp</a>
+                </div>
+                <div class="col">
+                    <p class='ptag' id='ptag' class="otp-alert">
+                    {% if messages %}
+                    {% for message in messages %}
+                   {{message}}
+                    {% endfor %}
+                    {% endif %}
+                </p>
+                </div>
+            </div>
+
+            <div class="inputbox">
+                <input type="submit" id="varify" class="input" value="Varify">
+            </div>
+
+        </div>
+        {% csrf_token %}
+    </form>
+
+
+    {% else %}
+
+    <form method="post" action="{% url 'mailsending' %}">
+
+        <div class="box">
+
+
+            <div class="login-with">
+                <a class="login-link" href="{% url 'social:begin' 'google-oauth2' %}"><img class='image' src="{% static 'images/google.jpg' %}" alt="gooogle">
+                    Sign in with Google</a>
+            </div>
+
+            <div class="hrdiv">
+                <hr hieght="" class="hr-1" />or
+                <hr hieght="" class="hr-1" />
+
+            </div>
+
+            <h3>Enter your Email for varification</h3>
+
+            <div class="inputbox">
+                <input type="email" name='email' required class="input" placeholder=" " id="email">
+                <label class="label" for="email"> Email</label>
+            </div>
+            <div class="row ">
+                <div style="margin-left:-70px;" class="col ">
+                    <a href="{% url 'login' %}">Already have an account!</a>
+                </div>
+            </div>
+
+
+            <div class="inputbox">
+                <input type="submit" id="send_otp" class="input" value="Send OTP">
+            </div>
+
+        </div>
+        {% csrf_token %}
+
+    </form>
+
+    {% endif %}
+
+</center>
+{% csrf_token %}
+{% endblock content %}

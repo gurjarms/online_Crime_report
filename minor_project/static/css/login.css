@@ -1,0 +1,149 @@
+.box {
+  border: 1px solid white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 450px
+}
+
+
+.inputbox {
+  margin: 40px;
+  position: relative;
+}
+
+input {
+  border: 1px solid white;
+  border-radius: 8px;
+  outline: none;
+  background: #1c1c1c;
+  color: white;
+  height: 40px;
+  width: 300px;
+  transition-duration: 600ms;
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=submit] {
+  background: rgb(60, 60, 60);
+  width: 100px;
+  transition-duration: 200ms;
+}
+
+input[type=submit]:hover {
+  background-color: black;
+
+}
+
+input[type=submit]:active {
+  background-color: rgb(30, 30, 30);
+}
+
+.label {
+  position: absolute;
+  top: 3px;
+  left: 20px;
+  font-size: 20px;
+  cursor: auto;
+  transition-duration: 600ms;
+  height: 14px;
+}
+
+.input:focus,
+.input:not(:placeholder-shown).input:not(:focus) {
+  border: 1px solid rgb(121, 183, 208);
+}
+
+.input:focus~.label,
+.input:not(:placeholder-shown).input:not(:focus)~.label {
+  top: -12px;
+  left: 10px;
+  font-size: 15px;
+  color: rgb(121, 183, 208);
+  background-color: #1c1c1c;
+}
+
+.row {
+  margin-left: 10px;
+  margin-top: -20px;
+  color: rgb(121, 183, 208);
+}
+
+a {
+  text-decoration: underline;
+  color: rgb(121, 183, 208);
+  text-decoration: dotted;
+}
+
+a:hover {
+  color: rgb(174, 217, 234);
+}
+
+a:active {
+  color: red;
+}
+
+.alert {
+  background-color: rgb(125, 16, 16);
+  height: 40px;
+  padding: 5px;
+  color: rgb(23, 2, 2);
+
+}
+
+.btn-close {
+  border: 1px solid black;
+  opacity: 1;
+  width: 10px;
+  height: 5px;
+
+}
+
+.hrdiv {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+hr {
+  width: 200px
+}
+
+.image {
+  width: 50px;
+  height: 43px;
+  margin-top: 2px;
+  margin-left: -22px;
+  border-radius: 5px;
+  padding-right: 3px;
+}
+
+.login-with {
+  border: 2px solid rgb(70, 100, 220);
+  background-color: rgb(70, 100, 220);
+  width: 225px;
+  height: 50px;
+  overflow: hidden;
+  color: white;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.login-link {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link:active {
+  color: white;
+}
+
+.bi {
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 5px;
+}
